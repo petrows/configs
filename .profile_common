@@ -1,0 +1,6 @@
+# Common profile config
+export EDITOR=$(/usr/bin/vim)
+export VISUAL=$EDITOR
+export GIT_EDITOR=$EDITOR
+export PATH="$HOME/.poetry/bin:$HOME/.cargo/bin:$HOME/.local/bin:$HOME/bin:$PATH"
+
