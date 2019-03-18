@@ -1,32 +1,38 @@
 [user]
-    name            = Peter Golovachev
+i	email = petro@petro.ws
+	name = Petro
+	
+[merge]
+	tool = kdiff3
 
 [core]
-    editor          = vim
-    excludesfile    = ~/.gitignore
-    whitespace      = fix, trailing-space
+	editor          = vim
+	excludesfile    = ~/.gitignore
+	whitespace      = fix, trailing-space
 
 [color]
-    ui          = auto
-    branch      = auto
-    diff        = auto
-    interactive = auto
-    status      = auto
+	ui          = auto
+	branch      = auto
+	diff        = auto
+	interactive = auto
+	status      = auto
 
 [color "diff"]
-    whitespace  = red reverse
+	whitespace  = red reverse
 
 [push]
-    default = tracking
-
+	default = tracking
+	
 [alias]
-    l       = log --graph --decorate --pretty=format:'%C(yellow)%h%Creset %s %C(green)(%cr)%Creset' --abbrev-commit --date=relative
-    s       = status --short
-    d       = diff
-    ds      = diff --cached
-    wdiff   = diff --color-words --ignore-all-space
-    co      = checkout
-    unstage = reset HEAD
-    undo    = checkout --
-    tarball = !git archive HEAD --prefix=$(basename $(pwd))/ | gzip > $(basename $(pwd))-$(git rev-parse --short HEAD).tar.gz
+	ca 		= commit -am
+	l       = log --graph --decorate --pretty=format:'%C(yellow)%h%Creset %s %C(green)(%cr)%Creset' --abbrev-commit --date=relative
+	s       = status --short
+	d       = diff
+	ds      = diff --cached
+	wdiff   = diff --color-words --ignore-all-space
+	co      = checkout
+	unstage = reset HEAD
+	undo    = checkout --
+	tarball = !git archive HEAD --prefix=$(basename $(pwd))/ | gzip > $(basename $(pwd))-$(git rev-parse --short HEAD).tar.gz
+	checkout-pr = "!f() { git fetch origin pull/$1/head:pr-$1 && git checkout pr-$1; }; f"
 
