@@ -85,3 +85,9 @@ set nofoldenable	" Disable folding by default
 
 " Search current word glogg-style
 map <C-g> :execute "vimgrep /" . expand("<cword>") . "/j %" <Bar> cw<CR>
+
+map <C-s> :w<CR>
+
+cnoreabbrev cdd cd %:p:h
+cnoreabbrev bo browse oldfiles
+
