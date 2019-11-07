@@ -13,10 +13,6 @@
 					},
 					{
 						"function": "powerline_gitstatus.gitstatus",
-						"priority": 50
-					},
-					{
-						"function": "powerline.segments.common.vcs.branch",
 						"priority": 40
 					}
 				]
